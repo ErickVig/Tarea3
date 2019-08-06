@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head></head>
+<title> Inscripcion y Registro Medico</title>
+
+
+<div align="Center"> 
+<h1>   REGISTRO MEDICO </h1></div>
+<h2> Ingrese sus datos correctamente:</h2>
+
+		
+<body>	
+
+<script>
+		function inciar(){
+			nombre1=document.getElementById("nombre");
+			nombre2=document.getElementById("apellido");
+			nombre1.addEventListener("input",validacion, false)
+			nombre2.addEventListener("input",validacion, false)
+			
+			validacion();
+					}
+					function validacion(){
+						if (nombre1.value=='' && nombre2.value=='') {
+							nombre1.setCustomValidity("ingrese al menos un nombre")
+							nombre1.style.background='#FFDDDD';
+						}else{
+							nombre1.setCustomValidity('');
+							nombre1.style.background='#FFFFFF';
+						}
+					}
+					window.addEventListener("load", inciar, false);
+				</script>
+				
+					<div align="center">	
+			<section>
+			<form name="registracion" method="get">
+			Nombre:
+			<input type="text" name="nombre" id="nombre">
+			<br>
+			<br>
+			Apellido:
+			<input type="text" name="apellido" id="apellido">
+			
+</form>
+			<br>
+			Fecha de Nacimiento:
+			<input type="date" name="fechan" id="nacimiento">
+			<br>
+			<br>
+			Numero de Telefono:
+			<input type="tel" name="telefono" id="tel" placeholder="solo se permiten 8 digitos">
+			<br>
+		
+
+		<script language="javascript">
+
+			function check(genero)
+			{
+   			document.genero.respuesta.value = genero;
+			}
+			</script>
+			</head>
+   
+			<body>
+			<form name="genero" id="genero">
+			<br>
+  		 Selecciona tu genero:<br><br>
+   		<input type="radio" name="genero" onclick="check(this.value)" 
+          value="Masculino"> Masculino <br>
+   		<input type="radio" name="genero" onclick="check(this.value)" 
+          value="Femenino"> Femenino <br>
+   		<input type="text" name="respuesta" size="20">
+		<br>
+		<br>
+
+		
+   		<input type="submit" id="send" value="ingresar Informacion">
+		</div>
+</form>
+</section>
+</body>
+</html>

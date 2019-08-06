@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head></head>
+<title> Solicitud de empleo</title>
+
+
+<div align="Center"> 
+<h1>   SOLICITUD DE EMPLEO </h1></div>
+<h2> Ingrese sus datos para aplicar:</h2>
+
+		
+<body>	
+
+<script>
+		function inciar(){
+			nombre1=document.getElementById("nombre");
+			nombre2=document.getElementById("apellido");
+			nombre1.addEventListener("input",validacion, false)
+			nombre2.addEventListener("input",validacion, false)
+			
+			validacion();
+					}
+					function validacion(){
+						if (nombre1.value=='' && nombre2.value=='') {
+							nombre1.setCustomValidity("ingrese al menos un nombre")
+							nombre1.style.background='#FFDDDD';
+						}else{
+							nombre1.setCustomValidity('');
+							nombre1.style.background='#FFFFFF';
+						}
+					}
+					window.addEventListener("load", inciar, false);
+				</script>
+				
+					<div align="center">	
+			<section>
+			<form name="registracion" method="get">
+			Nombre:
+			<input type="text" name="nombre" id="nombre">
+			
+			Apellido:
+			<input type="text" name="apellido" id="apellido">
+			<br>
+			<br>
+			CUI: <input  type="text" name="cedula" id="cedula" maxlength="13" minlength="13" size="25" pattern="[0-12]" 
+			placeholder="Sólo números"
+					onkeypress="return validarcedula(event)">
+
+			<br>
+			<br>
+
+			Estado Civil: <input type="text" name="estadocivil" id="estadoc" placeholder="Soltero o Casado" size="15">
+				
+			<br>
+			<br>
+			Fecha de Nacimiento:
+			<input type="date" name="fechan" id="nacimiento" size="10">
+			<br>
+			<br>
+			Numero de Telefono:
+			<input type="tel" name="telefono" id="tel" placeholder="Solo se permiten 8 digitos">
+			<br>
+			<br>
+			NIT:
+			<input type="char" name="numnit" id="nit" placeholder="Se permiten numeros y letras">
+			<br>
+			<br>
+
+			Estado Civil: <input type="text" name="genero" id="genero" placeholder="Masculino o Femenino" size="20">
+			<br>
+			<br>
+			Correo Electrónico: <input type="email" name="correo" id="correo" size="30" maxlength="45" title="Ejemplo: 1234@gmail.com" 
+			placeholder="Coloque su Correo Electrónico">
+			<br>
+			<br>	
+			Cargo que le Interesa: <input type="text" name="cargo" maxlength="25" size="15" placeholder="Cargo Interesado">
+			<br>
+			<br>
+  		 Selecciona tu grado academico:<br><br>
+   		<input type="radio" name="grado" onclick="check(this.value)" 
+          value="Primaria"> Primaria <br>
+   		<input type="radio" name="grado" onclick="check(this.value)" 
+          value="Basico"> Basico <br>
+		<input type="radio" name="grado" onclick="check(this.value)" 
+          value="Diversificado"> Diversificado <br>
+	<input type="radio" name="grado" onclick="check(this.value)" 
+          value="Universidad"> Universidad (Cursando) <br>
+	<input type="radio" name="grado" onclick="check(this.value)" 
+          value="Graduado U"> Graduado Universidad <br>
+		<br>
+		<br>
+		¿Cuenta con Experiencia? <br>
+		<input type="radio" name="experiencia" onclick="check(this.value)"
+		value="Si"> SI<br>
+	<input type="radio" name="experiencia" onclick="check(this.value)"
+		value="No"> No<br>
+		
+		
+	<!-- TERMINAAAAA -->
+		<br>
+		<input type="submit" id="send" value="ingresar Informacion" size="50">
+		<br>
+		<br>
+		<br>
+		</div>
+			
+</form>
+</section>
+</body>
+</html>
